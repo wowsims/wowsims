@@ -1,0 +1,69 @@
+{
+  "name": "@wowsims/core",
+  "version": "1.0.0",
+  "description": "WoWSims NPM Package",
+  "module": "dist/wowsims.esm.min.js",
+  "browser": "dist/wowsims.umd.min.js",
+  "main": "dist/wowsims.esm.min.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "rollup -c --configPlugin typescript",
+    "watch": "rollup -c -w",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "keywords": [],
+  "author": "WoWSims Developers",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wowsims/wowsims.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wowsims/wowsims/issues"
+  },
+  "homepage": "https://github.com/wowsims/wowsims#readme",
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.3.4",
+    "@rollup/plugin-image": "^3.0.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@storybook/addon-essentials": "^8.0.10",
+    "@storybook/addon-interactions": "^8.0.10",
+    "@storybook/addon-links": "^8.0.10",
+    "@storybook/addon-onboarding": "^8.0.10",
+    "@storybook/addon-styling-webpack": "^1.0.0",
+    "@storybook/blocks": "^8.0.10",
+    "@storybook/react": "^8.0.10",
+    "@storybook/react-vite": "^8.0.10",
+    "@storybook/test": "^8.0.10",
+    "@types/react": "^18.3.1",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "clsx": "^2.1.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-storybook": "^0.8.0",
+    "prettier": "^3.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rollup": "^4.17.2",
+    "rollup-plugin-scss": "^4.0.0",
+    "storybook": "^8.0.10",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
