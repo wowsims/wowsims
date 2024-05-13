@@ -1,5 +1,9 @@
 import clsx from "clsx";
-import { ButtonHTMLAttributes, PropsWithChildren, forwardRef } from "react";
+import React, {
+  ButtonHTMLAttributes,
+  PropsWithChildren,
+  forwardRef,
+} from "react";
 
 import "./variants/close.scss";
 import "./variants/reset.scss";
@@ -10,6 +14,8 @@ export type ButtonVariant =
   | "secondary"
   | "outline-secondary"
   | "link"
+  | "warning"
+  | "danger"
   | "close"
   | "reset"
   | "clear";
