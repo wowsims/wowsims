@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import { AnchorHTMLAttributes, PropsWithChildren, forwardRef } from "react";
 
 export type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {

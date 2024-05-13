@@ -1,3 +1,1 @@
-import * as ExpansionSelector from './ExpansionSelector'
-
-export { ExpansionSelector }
+export * from "./ExpansionSelector";
