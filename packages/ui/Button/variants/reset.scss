@@ -1,0 +1,18 @@
+@import "@wowsims/ui/global/shared";
+
+.btn-reset {
+  @include button-variant(
+    $background: transparent,
+    $border: transparent,
+    $color: map-get($link-colors, "link-danger"),
+    $hover-background: transparent,
+    $hover-border: transparent,
+    $hover-color: $body-color,
+    $active-background: transparent,
+    $active-border: transparent,
+    $active-color: map-get($link-colors, "link-danger"),
+    $disabled-background: transparent,
+    $disabled-border: transparent,
+    $disabled-color: rgba($body-color, 0.6)
+  );
+}
