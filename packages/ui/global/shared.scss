@@ -1,0 +1,13 @@
+// Bootstrap functions & variables
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/variables-dark';
+
+// Custom Bootstrap variable overrides
+@import 'variables';
+
+// Bootstrap configuration
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/utilities';
+@import 'bootstrap/scss/root';

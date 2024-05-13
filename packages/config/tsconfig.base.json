@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": ["DOM", "ES2021", "DOM.Iterable"],
+    "outDir": "/dist",
+    "strict": true,
+    "pretty": false,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "jsx": "react-jsx"
+  },
+  "include": ["."],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "binary_dist",
+    ".history",
+    "ui/core/index.ts",
+    "ui/core/proto/*"
+  ]
+}
