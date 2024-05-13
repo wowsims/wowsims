@@ -1,4 +1,4 @@
-import { getAsset } from "../assets/helper"
+import { getAsset } from "../assets/helpers"
 
 export enum Expansion {
   SOD,

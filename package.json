@@ -10,9 +10,9 @@
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "ui": "npm --workspace=@wowsims/ui run",
-    "assets": "npm --workspace=@wowsims/assets run",
-    "styleguide": "npm --workspace=@wowsims/styleguide run"
+    "ui": "npm --workspace=@wowsims/ui",
+    "assets": "npm --workspace=@wowsims/assets",
+    "styleguide": "npm --workspace=@wowsims/styleguide"
   },
   "keywords": [],
   "license": "MIT",

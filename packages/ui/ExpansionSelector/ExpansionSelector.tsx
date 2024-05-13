@@ -2,7 +2,7 @@ import clsx from "clsx";
 import "./ExpansionSelector.scss";
 import { EXPANSIONS, Expansion } from "@wowsims/constants/expansion";
 import { BASE_URL } from "@wowsims/constants";
-import { getAsset } from "../../assets/helper";
+import { getAsset } from "../../assets/helpers";
 import { Button } from "@wowsims/ui/Button";
 import { Link, LinkProps } from "@wowsims/ui/Link";
 import { ImgHTMLAttributes } from "react";

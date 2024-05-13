@@ -26,15 +26,6 @@
     "type-check": "tsc"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^8.0.10",
-    "@storybook/addon-interactions": "^8.0.10",
-    "@storybook/addon-links": "^8.0.10",
-    "@storybook/addon-onboarding": "^8.0.10",
-    "@storybook/addon-styling-webpack": "^1.0.0",
-    "@storybook/blocks": "^8.0.10",
-    "@storybook/react": "^8.0.10",
-    "@storybook/react-vite": "^8.0.10",
-    "@storybook/test": "^8.0.10",
     "@wowsims/config": "*",
     "@wowsims/constants": "*",
     "clsx": "^2.1.1",

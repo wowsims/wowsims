@@ -1,6 +1,6 @@
-import type { Preview } from '@storybook/react'
-import '@wowsims/ui/global/wowsims.scss'
-import 'bootstrap/dist/js/bootstrap.bundle'
+import type { Preview } from "@storybook/react";
+import "@wowsims/ui/global/wowsims.scss";
+import "bootstrap/dist/js/bootstrap.bundle";
 
 const preview: Preview = {
   parameters: {
@@ -11,6 +11,6 @@ const preview: Preview = {
       },
     },
   },
-}
+};
 
-export default preview
+export default preview;
