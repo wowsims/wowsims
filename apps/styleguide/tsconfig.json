@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "@wowsims/styleguide/*": ["../../packages/styleguide/*"],
+      "@wowsims/ui/*": ["../../packages/ui/*"],
+      "@wowsims/config/*": ["../../packages/config/*"],
+      "@wowsims/constants/*": ["../../packages/constants/*"],
+      "@wowsims/assets/*": ["../../packages/assets/*"]
+    }
+  }
+}

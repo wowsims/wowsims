@@ -1,0 +1,15 @@
+{
+  "extends": "@wowsims/config/tsconfig.base.json",
+  "include": ["./apps", "./packages"],
+  "exclude": ["dist", "node_modules"],
+  "compilerOptions": {
+    "outDir": "./dist",
+    "paths": {
+      "@wowsims/styleguide/*": ["./packages/styleguide/*"],
+      "@wowsims/ui/*": ["./packages/ui/*"],
+      "@wowsims/config/*": ["./packages/config/*"],
+      "@wowsims/constants/*": ["./packages/constants/*"],
+      "@wowsims/assets/*": ["./packages/assets/*"]
+    }
+  }
+}
