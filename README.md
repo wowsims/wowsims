@@ -21,6 +21,11 @@ cd packages/constants && npm link && cd ../.. && \
 cd packages/ui && npm link && cd ../..
 ```
 
+To test if your links have been successfully set:
+```
+npm ls -g --depth=0 --link=true
+```
+
 in your wowsims-{expansion} repository you now do the following:
 ```
 npm link @wowsims/assets @wowsims/config @wowsims/constants @wowsims/core @wowsims/ui
