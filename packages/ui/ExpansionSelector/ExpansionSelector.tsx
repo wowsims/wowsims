@@ -7,73 +7,75 @@ import { Button } from "../Button";
 import { Link, LinkProps } from "../Link";
 
 interface ExpansionSelectorProps {
-  defaultSelection: Expansion;
+	expansion: Expansion;
 }
 
-export const ExpansionSelector = ({
-  defaultSelection,
-}: ExpansionSelectorProps) => {
-  const selectedExpansion = EXPANSIONS[defaultSelection];
+export const ExpansionSelector = ({ expansion }: ExpansionSelectorProps) => {
+	const selectedExpansion = EXPANSIONS[expansion];
 
-  return (
-    <div className="dropdown expansion-selector">
-      <Button
-        variant="link"
-        className={clsx(
-          "dropdown-toggle",
-          "expansion-selector-btn",
-          `text-${selectedExpansion.theme}`,
-        )}
-        dataset={{
-          bsToggle: "dropdown",
-        }}
-        attributes={{
-          "aria-expanded": false,
-        }}
-      >
-        <ExpansionIcon src={selectedExpansion.iconURI} />
-        {selectedExpansion.name}
-      </Button>
-      <ul className="dropdown-menu dropdown-menu-end">
-        <ExpansionListItem
-          className="home"
-          href={BASE_URL}
-          imageSrc={getAsset("/images/wowsims-icon.png")}
-          label="WoWSims Home"
-        />
-        {Object.entries(EXPANSIONS).map(([_, expansionData]) => (
-          <ExpansionListItem
-            className={`expansion-${expansionData.theme}`}
-            href={expansionData.link}
-            imageSrc={expansionData.iconURI}
-            label={expansionData.name}
-          />
-        ))}
-      </ul>
-    </div>
-  );
+	return (
+		<div className="dropdown expansion-selector">
+			<Button
+				variant="link"
+				className={clsx(
+					"dropdown-toggle",
+					"expansion-selector-btn",
+					`text-${selectedExpansion.theme}`,
+				)}
+				dataset={{
+					bsToggle: "dropdown",
+				}}
+				attributes={{
+					"aria-expanded": false,
+				}}
+			>
+				<ExpansionIcon src={selectedExpansion.iconURI} />
+				{selectedExpansion.name}
+			</Button>
+			<ul className="dropdown-menu dropdown-menu-end">
+				<ExpansionListItem
+					className="home"
+					href={BASE_URL}
+					imageSrc={getAsset("/images/wowsims-icon.png")}
+					label="WoWSims Home"
+				/>
+				{Object.entries(EXPANSIONS).map(([_, expansionData]) => (
+					<ExpansionListItem
+						className={`expansion-${expansionData.theme}`}
+						href={expansionData.link}
+						imageSrc={expansionData.iconURI}
+						label={expansionData.name}
+					/>
+				))}
+			</ul>
+		</div>
+	);
 };
 
 const ExpansionListItem = ({
-  className,
-  href,
-  imageSrc,
-  label,
+	className,
+	href,
+	imageSrc,
+	label,
 }: Pick<LinkProps, "className" | "href"> & {
-  imageSrc: string;
-  label: string;
+	imageSrc: string;
+	label: string;
 }) => (
-  <li>
-    <Link
-      className={clsx("dropdown-item", "expansion-dropdown-item", className)}
-      href={href}
-    >
-      <ExpansionIcon src={imageSrc} />
-      {label}
-    </Link>
-  </li>
+	<li>
+		<Link
+			className={clsx(
+				"dropdown-item",
+				"expansion-dropdown-item",
+				className,
+			)}
+			href={href}
+		>
+			<ExpansionIcon src={imageSrc} />
+			{label}
+		</Link>
+	</li>
 );
 
 const ExpansionIcon = ({ src }: JSX.HTMLElementProps<"img">) => (
-  <img className="expansion-selector-icon" src={src} />
+	<img className="expansion-selector-icon" src={src} />
 );

@@ -7,24 +7,12 @@ This repository uses [Turborepo](https://turbo.build/repo/docs) to dev/build.
 ### Static components
 If you wish to develop the static components you can use Storybook.
 
-`yarn build` 
+`yarn build`
 
 ### Within WoWSims
-If you wish to use this repository locally within your local WowSims repo you will have to link all the packages.
-
-Example to create links for all current packages
+If you wish to use this repository locally within your local WowSims repo you will have to link all the packages in your wowsims-{expansion} repository:
 ```
-npm link && \
-cd packages/assets && yarn link && cd ../.. && \
-cd packages/config && yarn link && cd ../.. && \
-cd packages/constants && yarn link && cd ../.. && \
-cd packages/ui && yarn link && cd ../..
-```
-
-in your wowsims-{expansion} repository you now do the following:
-```
-yarn link @wowsims/assets @wowsims/config @wowsims/constants @wowsims/core @wowsims/ui
-```
+yarn link ../{wowsims-repository} -p -a -r```
 _This will link all your local wowsims core packages to the repository_
 
 ## Commands
