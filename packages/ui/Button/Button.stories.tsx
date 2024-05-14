@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/html";
 import { Button } from "./Button";
 
 const meta: Meta<typeof Button> = {
@@ -24,7 +24,7 @@ const meta: Meta<typeof Button> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Button>;
 
 const defaultArgs: Story["args"] = {
   size: undefined,

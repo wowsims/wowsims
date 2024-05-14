@@ -3,9 +3,8 @@ import "./ExpansionSelector.scss";
 import { EXPANSIONS, Expansion } from "@wowsims/constants/expansion";
 import { BASE_URL } from "@wowsims/constants";
 import { getAsset } from "../../assets/helpers";
-import { Button } from "@wowsims/ui/Button";
-import { Link, LinkProps } from "@wowsims/ui/Link";
-import { ImgHTMLAttributes } from "react";
+import { Button } from "../Button";
+import { Link, LinkProps } from "../Link";
 
 interface ExpansionSelectorProps {
   defaultSelection: Expansion;
@@ -25,8 +24,12 @@ export const ExpansionSelector = ({
           "expansion-selector-btn",
           `text-${selectedExpansion.theme}`,
         )}
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
+        dataset={{
+          bsToggle: "dropdown",
+        }}
+        attributes={{
+          "aria-expanded": false,
+        }}
       >
         <ExpansionIcon src={selectedExpansion.iconURI} />
         {selectedExpansion.name}
@@ -38,9 +41,8 @@ export const ExpansionSelector = ({
           imageSrc={getAsset("/images/wowsims-icon.png")}
           label="WoWSims Home"
         />
-        {Object.entries(EXPANSIONS).map(([expansionId, expansionData]) => (
+        {Object.entries(EXPANSIONS).map(([_, expansionData]) => (
           <ExpansionListItem
-            key={expansionId}
             className={`expansion-${expansionData.theme}`}
             href={expansionData.link}
             imageSrc={expansionData.iconURI}
@@ -72,6 +74,6 @@ const ExpansionListItem = ({
   </li>
 );
 
-const ExpansionIcon = ({ src }: ImgHTMLAttributes<HTMLImageElement>) => (
+const ExpansionIcon = ({ src }: JSX.HTMLElementProps<"img">) => (
   <img className="expansion-selector-icon" src={src} />
 );

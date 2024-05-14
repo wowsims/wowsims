@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/html";
 import { Link } from "./Link";
 import { BASE_URL } from "@wowsims/constants";
 
@@ -17,14 +17,18 @@ const meta: Meta<typeof Link> = {
       options: ["_blank", "_self", "_parent", "_top"],
       control: { type: "select" },
     },
+    className: {
+      control: { type: "text" },
+    },
   },
   args: {
+    href: BASE_URL,
     target: "_blank",
   },
 };
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Link>;
 
 const defaultArgs: Story["args"] = {};
 
@@ -32,6 +36,5 @@ export const Primary: Story = {
   args: {
     ...defaultArgs,
     children: "Example Link",
-    href: BASE_URL,
   },
 };

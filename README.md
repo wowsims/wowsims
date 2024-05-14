@@ -7,7 +7,7 @@ This repository uses [Turborepo](https://turbo.build/repo/docs) to dev/build.
 ### Static components
 If you wish to develop the static components you can use Storybook.
 
-`npm run build` 
+`yarn build` 
 
 ### Within WoWSims
 If you wish to use this repository locally within your local WowSims repo you will have to link all the packages.
@@ -15,55 +15,50 @@ If you wish to use this repository locally within your local WowSims repo you wi
 Example to create links for all current packages
 ```
 npm link && \
-cd packages/assets && npm link && cd ../.. && \
-cd packages/config && npm link && cd ../.. && \
-cd packages/constants && npm link && cd ../.. && \
-cd packages/ui && npm link && cd ../..
-```
-
-To test if your links have been successfully set:
-```
-npm ls -g --depth=0 --link=true
+cd packages/assets && yarn link && cd ../.. && \
+cd packages/config && yarn link && cd ../.. && \
+cd packages/constants && yarn link && cd ../.. && \
+cd packages/ui && yarn link && cd ../..
 ```
 
 in your wowsims-{expansion} repository you now do the following:
 ```
-npm link @wowsims/assets @wowsims/config @wowsims/constants @wowsims/core @wowsims/ui
+yarn link @wowsims/assets @wowsims/config @wowsims/constants @wowsims/core @wowsims/ui
 ```
 _This will link all your local wowsims core packages to the repository_
 
 ## Commands
-`npm run build`
+`yarn build`
 
 Runs build command to compile a static version of the Styleguide
 
 ---
 
-`npm run dev`
+`yarn dev`
 
 Starts the Storybook instance to develop the UI
 
 ---
 
-`npm run (ui | ssets | styleguide)`
+`yarn (ui | ssets | styleguide)`
 
-Shorthand for executing `npm run` inside a specific workspace.
-Example: `npm run ui install packageName` will install `packageName` in the `@wowsims/ui` workspace.
+Shorthand for executing `yarn` inside a specific workspace.
+Example: `yarn ui install packageName` will install `packageName` in the `@wowsims/ui` workspace.
 
 ---
 
-`npm run type-check`
+`yarn type-check`
 
 Runs TypeScript checker through all workspaces
 
 ---
 
-`npm run lint(:fix)`
+`yarn lint(:fix)`
 
 Runs `lint` or `lint:fix` through all workspaces
 
 ---
 
-`npm run format`
+`yarn format`
 
 Runs Prettier through all workspaces

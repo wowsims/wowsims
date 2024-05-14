@@ -4,25 +4,25 @@
   "version": "1.0.0",
   "description": "WoWSims Constants",
   "engines": {
-    "yarn": "Please use npm",
-    "node": ">= 9"
+    "npm": "Please use Yarn",
+    "node": ">= 18"
   },
   "volta": {
     "node": ">= 18",
     "npm": ">= 9"
   },
   "scripts": {
-    "format": "npm run lint:fix && npm run prettier:fix",
-    "lint": "npm run lint:js && npm run lint:css",
-    "lint:fix": "npm run lint:js:fix && npm run lint:css:fix",
+    "format": "yarn lint:fix && yarn prettier:fix",
+    "lint": "yarn lint:js && yarn lint:css",
+    "lint:fix": "yarn lint:js:fix && yarn lint:css:fix",
     "lint:js": "npx eslint \"./ui/**/*.{js,jsx,ts,tsx}\"",
-    "lint:js:fix": "npm run lint:js -- --fix",
+    "lint:js:fix": "yarn lint:js -- --fix",
     "lint:css": "stylelint \"./ui/**/*.scss\"",
-    "lint:css:fix": "npm run lint:css -- --fix",
+    "lint:css:fix": "yarn lint:css -- --fix",
     "lint:json": "npx eslint \"./{ui,jsonschema}/**/*.json\"",
-    "lint:json:fix": "npm run lint:json -- --fix",
+    "lint:json:fix": "yarn lint:json -- --fix",
     "prettier": "npx prettier \"./ui/**/*.{js,jsx,ts,tsx,scss,css,json}\" --check",
-    "prettier:fix": "npm run prettier -- --write",
+    "prettier:fix": "yarn prettier -- --write",
     "type-check": "tsc"
   },
   "devDependencies": {

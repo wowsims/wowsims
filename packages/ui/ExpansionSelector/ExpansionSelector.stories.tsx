@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/html";
 import { ExpansionSelector } from "./ExpansionSelector";
 import { Expansion } from "@wowsims/constants/expansion";
 

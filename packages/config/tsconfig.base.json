@@ -8,9 +8,10 @@
     "strict": true,
     "pretty": false,
     "allowJs": true,
+    "declaration": true,
+    "incremental": true,
     "resolveJsonModule": true,
     "importHelpers": true,
-    "declaration": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "noImplicitReturns": true,
@@ -20,7 +21,9 @@
     "noUnusedParameters": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "jsx": "react-jsx"
+    "jsx": "preserve",
+    "jsxFactory": "element",
+    "jsxFragmentFactory": "fragment"
   },
   "include": ["."],
   "exclude": [

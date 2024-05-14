@@ -1,4 +1,4 @@
-import type { StorybookConfig } from "@storybook/react-vite";
+import type { StorybookConfig } from "@storybook/html-vite";
 
 const config: StorybookConfig = {
   stories: [
@@ -13,10 +13,7 @@ const config: StorybookConfig = {
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
   ],
-  framework: "@storybook/react-vite",
-  docs: {
-    autodocs: "tag",
-  },
+  framework: "@storybook/html-vite",
   managerHead: `<style>
   .sidebar-header a img { width: 32px; }
 </style>`,

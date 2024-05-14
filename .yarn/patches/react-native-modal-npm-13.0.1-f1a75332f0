@@ -1,0 +1,14 @@
+diff --git a/dist/modal.d.ts b/dist/modal.d.ts
+index b63bcfcaa6db8f7a70277a9647c440c31a6e466a..9513d6988b540480e996f760ead807559cfcf1e0 100644
+--- a/dist/modal.d.ts
++++ b/dist/modal.d.ts
+@@ -62,7 +62,8 @@ export declare type ModalProps = ViewProps & {
+     onOrientationChange?: OnOrientationChange;
+     presentationStyle?: PresentationStyle;
+     useNativeDriverForBackdrop?: boolean;
+-} & typeof defaultProps;
++    textColor?: string;
++} & Partial<typeof defaultProps>;
+ export declare class ReactNativeModal extends React.Component<ModalProps, State> {
+     static propTypes: {
+         animationIn: PropTypes.Requireable<string | object>;

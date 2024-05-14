@@ -5,8 +5,8 @@
   "description": "WoWSims Assets",
   "type": "module",
   "engines": {
-    "yarn": "Please use npm",
-    "node": ">= 9"
+    "npm": "Please use Yarn",
+    "node": ">= 18"
   },
   "volta": {
     "node": ">= 18",

@@ -1,15 +1,28 @@
-import { AnchorHTMLAttributes, PropsWithChildren, forwardRef } from "react";
 
-export type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
+export type LinkProps = JSX.HTMLElementProps<"a"> & {
   variant?: undefined;
+  // tsx-vanilla has String type for href (typo)
+  href: string;
 };
 
-export const Link = forwardRef<HTMLAnchorElement, PropsWithChildren<LinkProps>>(
-  ({ className, children, variant, href, role, ...props }, ref) => {
-    return (
-      <a ref={ref} href={href} className={className} role={role} {...props}>
-        {children}
-      </a>
-    );
-  },
-);
+export const Link = ({
+  ref,
+  className,
+  children,
+  variant,
+  href,
+  attributes,
+  ...props
+}: LinkProps) => {
+  return (
+    <a
+      ref={ref}
+      href={href}
+      className={className}
+      attributes={attributes}
+      {...props}
+    >
+      {children}
+    </a>
+  );
+};

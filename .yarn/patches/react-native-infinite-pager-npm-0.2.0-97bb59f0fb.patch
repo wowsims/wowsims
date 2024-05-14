@@ -1,0 +1,12 @@
+diff --git a/src/index.tsx b/src/index.tsx
+index 878c84548ac5139340178a87590cffadccc17eef..7dff2ac3c6747502b1beed3f63de823d7aaf790b 100644
+--- a/src/index.tsx
++++ b/src/index.tsx
+@@ -219,6 +219,7 @@ function InfinitePager(
+         -1 * Math.round((translate.value + velocityModifier) / pageSize.value);
+       if (page < minIndex) page = minIndex;
+       if (page > maxIndex) page = maxIndex;
++      page = isNaN(page) ? 0 : page
+ 
+       const animCfg = Object.assign(
+         {},
