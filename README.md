@@ -15,7 +15,7 @@ If you wish to develop the static components you can use Storybook.
 If you wish to use this repository locally within your local WowSims repo you will have to link all the packages in your wowsims-{expansion} repository:
 
 ````
-yarn link ../{wowsims-repository} -p -a -r```
+yarn link ../{wowsims-repository} -p -A -r```
 _This will link all your local wowsims core packages to the repository_
 
 ## Commands
