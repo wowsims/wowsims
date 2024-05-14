@@ -1,20 +1,17 @@
-import type { StorybookConfig } from "@storybook/html-vite";
+import type { StorybookConfig } from '@storybook/html-vite';
 
 const config: StorybookConfig = {
-  stories: [
-    "../../../packages/**/*.mdx",
-    "../../../packages/**/*.stories.@(js|jsx|mjs|ts|tsx)",
-  ],
-  staticDirs: ["../../../packages/assets"],
-  addons: [
-    "@storybook/addon-onboarding",
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@chromatic-com/storybook",
-    "@storybook/addon-interactions",
-  ],
-  framework: "@storybook/html-vite",
-  managerHead: `<style>
+	stories: ['../../../packages/**/*.mdx', '../../../packages/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+	staticDirs: ['../../../packages/assets'],
+	addons: [
+		'@storybook/addon-onboarding',
+		'@storybook/addon-links',
+		'@storybook/addon-essentials',
+		'@chromatic-com/storybook',
+		'@storybook/addon-interactions',
+	],
+	framework: '@storybook/html-vite',
+	managerHead: `<style>
   .sidebar-header a img { width: 32px; }
 </style>`,
 };

@@ -1,3 +1,3 @@
 declare global {
-  import "tsx-vanilla";
+	import 'tsx-vanilla';
 }

@@ -1,2 +1,1 @@
-export const BASE_URL = 'https://wowsims.github.io'
-
+export const BASE_URL = 'https://wowsims.github.io';

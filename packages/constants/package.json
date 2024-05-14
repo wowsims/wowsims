@@ -1,31 +1,31 @@
 {
-  "name": "@wowsims/constants",
-  "author": "WoWSims Developers",
-  "version": "1.0.0",
-  "description": "WoWSims Constants",
-  "engines": {
-    "npm": "Please use Yarn",
-    "node": ">= 18"
-  },
-  "volta": {
-    "node": ">= 18",
-    "npm": ">= 9"
-  },
-  "scripts": {
-    "format": "yarn lint:fix && yarn prettier:fix",
-    "lint": "yarn lint:js && yarn lint:css",
-    "lint:fix": "yarn lint:js:fix && yarn lint:css:fix",
-    "lint:js": "npx eslint \"./ui/**/*.{js,jsx,ts,tsx}\"",
-    "lint:js:fix": "yarn lint:js -- --fix",
-    "lint:css": "stylelint \"./ui/**/*.scss\"",
-    "lint:css:fix": "yarn lint:css -- --fix",
-    "lint:json": "npx eslint \"./{ui,jsonschema}/**/*.json\"",
-    "lint:json:fix": "yarn lint:json -- --fix",
-    "prettier": "npx prettier \"./ui/**/*.{js,jsx,ts,tsx,scss,css,json}\" --check",
-    "prettier:fix": "yarn prettier -- --write",
-    "type-check": "tsc"
-  },
-  "devDependencies": {
-    "@wowsims/config": "*"
-  }
+	"name": "@wowsims/constants",
+	"author": "WoWSims Developers",
+	"version": "1.0.0",
+	"description": "WoWSims Constants",
+	"engines": {
+		"npm": "Please use Yarn",
+		"node": ">= 18"
+	},
+	"volta": {
+		"node": ">= 18",
+		"npm": ">= 9"
+	},
+	"scripts": {
+		"format": "yarn lint:fix && yarn prettier:fix",
+		"lint": "yarn lint:js && yarn lint:css",
+		"lint:fix": "yarn lint:js:fix",
+		"lint:js": "npx eslint \"*.{js,jsx,ts,tsx}\"",
+		"lint:js:fix": "yarn lint:js -- --fix",
+		"lint:css": "stylelint \"./**/*.scss\"",
+		"lint:css:fix": "yarn lint:css -- --fix",
+		"lint:json": "npx eslint \"./**/*.json\"",
+		"lint:json:fix": "yarn lint:json -- --fix",
+		"prettier": "npx prettier \"./**/*.{js,jsx,ts,tsx,scss,css,json}\" --check",
+		"prettier:fix": "yarn prettier -- --write",
+		"type-check": "tsc"
+	},
+	"devDependencies": {
+		"@wowsims/config": "*"
+	}
 }

@@ -1,10 +1,13 @@
-import clsx from "clsx";
-import "./ExpansionSelector.scss";
-import { EXPANSIONS, Expansion } from "@wowsims/constants/expansion";
-import { BASE_URL } from "@wowsims/constants";
-import { getAsset } from "../../assets/helpers";
-import { Button } from "../Button";
-import { Link, LinkProps } from "../Link";
+import './ExpansionSelector.scss';
+
+import { BASE_URL } from '@wowsims/constants';
+import { Expansion, EXPANSIONS } from '@wowsims/constants/expansion';
+import clsx from 'clsx';
+import { element, fragment, ref } from 'tsx-vanilla';
+
+import { getAsset } from '../../assets/helpers';
+import { Button } from '../Button';
+import { Link, LinkProps } from '../Link';
 
 interface ExpansionSelectorProps {
 	expansion: Expansion;
@@ -17,28 +20,18 @@ export const ExpansionSelector = ({ expansion }: ExpansionSelectorProps) => {
 		<div className="dropdown expansion-selector">
 			<Button
 				variant="link"
-				className={clsx(
-					"dropdown-toggle",
-					"expansion-selector-btn",
-					`text-${selectedExpansion.theme}`,
-				)}
+				className={clsx('dropdown-toggle', 'expansion-selector-btn', `text-${selectedExpansion.theme}`)}
 				dataset={{
-					bsToggle: "dropdown",
+					bsToggle: 'dropdown',
 				}}
 				attributes={{
-					"aria-expanded": false,
-				}}
-			>
+					'aria-expanded': false,
+				}}>
 				<ExpansionIcon src={selectedExpansion.iconURI} />
 				{selectedExpansion.name}
 			</Button>
 			<ul className="dropdown-menu dropdown-menu-end">
-				<ExpansionListItem
-					className="home"
-					href={BASE_URL}
-					imageSrc={getAsset("/images/wowsims-icon.png")}
-					label="WoWSims Home"
-				/>
+				<ExpansionListItem className="home" href={BASE_URL} imageSrc={getAsset('/images/wowsims-icon.png')} label="WoWSims Home" />
 				{Object.entries(EXPANSIONS).map(([_, expansionData]) => (
 					<ExpansionListItem
 						className={`expansion-${expansionData.theme}`}
@@ -57,25 +50,16 @@ const ExpansionListItem = ({
 	href,
 	imageSrc,
 	label,
-}: Pick<LinkProps, "className" | "href"> & {
+}: Pick<LinkProps, 'className' | 'href'> & {
 	imageSrc: string;
 	label: string;
 }) => (
 	<li>
-		<Link
-			className={clsx(
-				"dropdown-item",
-				"expansion-dropdown-item",
-				className,
-			)}
-			href={href}
-		>
+		<Link className={clsx('dropdown-item', 'expansion-dropdown-item', className)} href={href}>
 			<ExpansionIcon src={imageSrc} />
 			{label}
 		</Link>
 	</li>
 );
 
-const ExpansionIcon = ({ src }: JSX.HTMLElementProps<"img">) => (
-	<img className="expansion-selector-icon" src={src} />
-);
+const ExpansionIcon = ({ src }: JSX.HTMLElementProps<'img'>) => <img className="expansion-selector-icon" src={src} />;

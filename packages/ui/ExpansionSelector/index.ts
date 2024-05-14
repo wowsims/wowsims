@@ -1,1 +1,1 @@
-export * from "./ExpansionSelector";
+export * from './ExpansionSelector';
