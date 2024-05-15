@@ -1,4 +1,4 @@
-const baseConfig = require("@wowsims/config/.eslintrc.base.js");
+const baseConfig = require('@wowsims/config/.eslintrc.base.js');
 
 module.exports = {
 	...baseConfig,

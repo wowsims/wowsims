@@ -3,15 +3,14 @@ import './ExpansionSelector.scss';
 import { BASE_URL } from '@wowsims/constants';
 import { Expansion, EXPANSIONS } from '@wowsims/constants/expansion';
 import clsx from 'clsx';
-import { element, fragment, ref } from 'tsx-vanilla';
 
 import { getAsset } from '../../assets/helpers';
 import { Button } from '../Button';
 import { Link, LinkProps } from '../Link';
 
-interface ExpansionSelectorProps {
+export type ExpansionSelectorProps = {
 	expansion: Expansion;
-}
+};
 
 export const ExpansionSelector = ({ expansion }: ExpansionSelectorProps) => {
 	const selectedExpansion = EXPANSIONS[expansion];

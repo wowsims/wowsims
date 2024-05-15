@@ -1,16 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/html';
-import { Button } from './Button';
 
-const meta: Meta<typeof Button> = {
+import { Button, ButtonProps } from './Button';
+
+const meta: Meta<ButtonProps> = {
 	title: 'SimUI/Button',
-	component: Button,
 	parameters: {
-		// Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
 		layout: 'centered',
 	},
-	// This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
 	tags: ['autodocs'],
-	// More on argTypes: https://storybook.js.org/docs/api/argtypes
 	argTypes: {
 		size: {
 			options: ['default', 'sm', 'lg'],
@@ -24,13 +21,16 @@ const meta: Meta<typeof Button> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<ButtonProps>;
 
-const defaultArgs: Story['args'] = {
-	size: undefined,
+const defaultArgs: Story['args'] = {};
+
+const Default: Story = {
+	render: args => <Button {...args} />,
 };
 
 export const Primary: Story = {
+	...Default,
 	args: {
 		...defaultArgs,
 		children: 'Primary button',
@@ -39,6 +39,7 @@ export const Primary: Story = {
 };
 
 export const PrimaryOutline: Story = {
+	...Default,
 	args: {
 		...defaultArgs,
 		children: 'Primary outline button',
@@ -47,6 +48,7 @@ export const PrimaryOutline: Story = {
 };
 
 export const Secondary: Story = {
+	...Default,
 	args: {
 		...defaultArgs,
 		children: 'Secondary button',
@@ -55,6 +57,7 @@ export const Secondary: Story = {
 };
 
 export const SecondaryOutline: Story = {
+	...Default,
 	args: {
 		...defaultArgs,
 		children: 'Secondary outline button',
@@ -63,6 +66,7 @@ export const SecondaryOutline: Story = {
 };
 
 export const Close: Story = {
+	...Default,
 	args: {
 		...defaultArgs,
 		variant: 'close',
@@ -70,6 +74,7 @@ export const Close: Story = {
 	},
 };
 export const Reset: Story = {
+	...Default,
 	args: {
 		...defaultArgs,
 		variant: 'reset',

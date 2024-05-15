@@ -2,7 +2,6 @@ import './variants/close.scss';
 import './variants/reset.scss';
 
 import clsx from 'clsx';
-import { element, fragment, ref } from 'tsx-vanilla';
 
 export type ButtonVariant = 'primary' | 'outline-primary' | 'secondary' | 'outline-secondary' | 'link' | 'warning' | 'danger' | 'close' | 'reset' | 'clear';
 
