@@ -22,24 +22,24 @@ export const EXPANSIONS: Record<Expansion, ExpansionData> = {
 		name: 'Season of Discovery',
 		theme: 'sod',
 		link: 'https://wowsims.github.io/sod',
-		iconURI: getAsset('/images/expansion-icon-classic.png'),
+		iconURI: '@wowsims/assets/images/expansion-icon-classic.png',
 	},
 	[Expansion.TBC]: {
 		name: 'The Burning Crusade',
 		theme: 'tbc',
 		link: 'https://wowsims.github.io/tbc',
-		iconURI: getAsset('/images/expansion-icon-tbc.png'),
+		iconURI: '@wowsims/assets/images/expansion-icon-tbc.png',
 	},
 	[Expansion.WOTLK]: {
 		name: 'Wrath of the Lich King',
 		theme: 'wotlk',
 		link: 'https://wowsims.github.io/wotlk',
-		iconURI: getAsset('/images/expansion-icon-wotlk.png'),
+		iconURI: '@wowsims/assets/images/expansion-icon-wotlk.png',
 	},
 	[Expansion.CATA]: {
 		name: 'Cataclysm',
 		theme: 'cata',
 		link: 'https://wowsims.github.io/cata',
-		iconURI: getAsset('/images/expansion-icon-cata.png'),
+		iconURI: '@wowsims/assets/images/expansion-icon-cata.png',
 	},
 };

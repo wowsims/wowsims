@@ -30,7 +30,7 @@ export const ExpansionSelector = ({ expansion }: ExpansionSelectorProps) => {
 				{selectedExpansion.name}
 			</Button>
 			<ul className="dropdown-menu dropdown-menu-end">
-				<ExpansionListItem className="home" href={BASE_URL} imageSrc={getAsset('/images/wowsims-icon.png')} label="WoWSims Home" />
+				<ExpansionListItem className="home" href={BASE_URL} imageSrc="@wowsims/assets/images/wowsims-icon.png" label="WoWSims Home" />
 				{Object.entries(EXPANSIONS).map(([_, expansionData]) => (
 					<ExpansionListItem
 						className={`expansion-${expansionData.theme}`}

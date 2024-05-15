@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "WoWSims Assets",
   "type": "module",
+  "main": "index.ts",
   "engines": {
     "npm": "Please use Yarn",
     "node": ">= 18"

@@ -43,6 +43,7 @@
 		"@wowsims/constants": "*",
 		"@wowsims/ui": "*",
 		"clsx": "^2.1.1",
+		"glob": "^10.3.15",
 		"sass": "^1.77.1",
 		"storybook": "^8.0.10",
 		"typescript": "^5.3.0",
