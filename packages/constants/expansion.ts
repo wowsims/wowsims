@@ -1,5 +1,3 @@
-import { getAsset } from '../assets/helpers';
-
 export enum Expansion {
 	SOD,
 	TBC,

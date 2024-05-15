@@ -4,7 +4,6 @@ import { BASE_URL } from '@wowsims/constants';
 import { Expansion, EXPANSIONS } from '@wowsims/constants/expansion';
 import clsx from 'clsx';
 
-import { getAsset } from '../../assets/helpers';
 import { Button } from '../Button';
 import { Link, LinkProps } from '../Link';
 
