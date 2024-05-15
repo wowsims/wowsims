@@ -48,7 +48,7 @@ export default defineConfig({
 	esbuild: {
 		jsxFactory: 'element',
 		jsxFragment: 'fragment',
-		jsxInject: "import { element, fragment, ref } from 'tsx-vanilla';",
+		jsxInject: "import { element, fragment } from 'tsx-vanilla';",
 	},
 	build: {
 		rollupOptions: {
