@@ -1,20 +1,37 @@
 import fs from 'fs';
 import { IncomingMessage, ServerResponse } from 'http';
 import path from 'path';
+import { Connect, Plugin, PluginOption } from 'vite';
 
-const DEFAULT_MIME_TYPE = 'application/octet-stream';
-const supportedMimeTypes = {
-	'image/jpeg': ['.jpg', '.jpeg'],
-	'image/png': ['.png'],
-	'image/gif': ['.gif'],
-	'image/webp': ['.webp'],
-	'image/avif ': ['.avif '],
-	'text/css': ['.css'],
-	'text/javascript': ['.js'],
-	'font/woff2': ['.woff2', 'woff'],
-	'application/json': ['.json'],
-	'application/wasm': ['.wasm'],
-};
+import { DEFAULT_MIME_TYPE, supportedMimeTypes } from '.';
+
+export const serveExternalAssets = ({
+	assets,
+	transform,
+	additionalMiddlewareHook,
+}: {
+	assets: AssetPath[];
+	additionalMiddlewareHook?: Connect.NextHandleFunction;
+} & Pick<Plugin, 'transform'>): PluginOption =>
+	({
+		name: 'serve-external-assets',
+		configureServer: server => {
+			server.middlewares.use(async (req, res, next) => {
+				const shouldReturn = additionalMiddlewareHook?.(req, res, next);
+				if (shouldReturn) return;
+
+				const url = req.url!;
+				const replaceAsset = assets.find(replacePath => url.includes(replacePath.replacePath));
+				if (replaceAsset) {
+					modifyServeFilePath(res, url, replaceAsset.sourcePath, replaceAsset.replacePath);
+					return;
+				} else {
+					next();
+				}
+			});
+		},
+		transform,
+	}) satisfies PluginOption;
 
 export const determineContentType = (filePath: string) => {
 	const extension = path.extname(filePath).toLowerCase();
@@ -27,6 +44,11 @@ export const modifyServeFilePath = (res: ServerResponse<IncomingMessage>, url: s
 	const assetRelativePath = url.split(urlReplaceString)[1];
 	const requestedPath = path.join(sourcePath, assetRelativePath);
 	serveFile(res, requestedPath);
+};
+
+export type AssetPath = {
+	replacePath: string;
+	sourcePath: string;
 };
 
 export const serveFile = (res: ServerResponse<IncomingMessage>, filePath: string) => {

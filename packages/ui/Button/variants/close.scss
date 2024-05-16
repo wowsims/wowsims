@@ -1,11 +1,11 @@
 .btn-close {
-  background: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--link-transition);
+	background: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: var(--link-transition);
 
-  &:hover {
-    color: var(--bs-white);
-  }
+	&:hover {
+		color: var(--bs-white);
+	}
 }
