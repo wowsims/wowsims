@@ -1733,6 +1733,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fortawesome/fontawesome-common-types@npm:^6.5.2":
+  version: 6.5.2
+  resolution: "@fortawesome/fontawesome-common-types@npm:6.5.2"
+  checksum: 8164f3e16683db5125634a4fbf3db83a5a7366bb830111ffe8538e1b8f98f8fe6dc35609cf2c595a7d6840e27d3fb45b57faf7340e40e98f0d76207fe8f94e79
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.11.14":
   version: 0.11.14
   resolution: "@humanwhocodes/config-array@npm:0.11.14"
@@ -3746,6 +3753,7 @@ __metadata:
   resolution: "@wowsims/ui@workspace:packages/ui"
   dependencies:
     "@chromatic-com/storybook": ^1.3.4
+    "@fortawesome/fontawesome-common-types": ^6.5.2
     "@storybook/html": ^8.1.0
     "@storybook/test": ^8.1.0
     "@wowsims/config": "*"

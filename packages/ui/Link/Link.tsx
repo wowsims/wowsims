@@ -20,7 +20,7 @@ export const Link = ({ ref, as, className, children, href, role, attributes, ...
 	}
 
 	return (
-		<a ref={ref} {...additionalProps} href={href} className={className} attributes={{ ...attributes, ...additionalProps.attributes, role }} {...props}>
+		<a ref={ref} href={href} className={className} {...additionalProps} attributes={{ ...attributes, role, ...additionalProps.attributes }} {...props}>
 			{children}
 		</a>
 	) as HTMLAnchorElement;
