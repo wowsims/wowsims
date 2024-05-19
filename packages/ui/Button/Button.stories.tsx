@@ -14,6 +14,12 @@ const meta: Meta<ButtonProps> = {
 			control: { type: 'radio' },
 			mapping: { default: undefined },
 		},
+		iconLeft: {
+			description: 'Can be a <Icon /> or a IconName',
+		},
+		iconRight: {
+			description: 'Can be a <Icon /> or a IconName',
+		},
 	},
 	args: {
 		size: undefined,
