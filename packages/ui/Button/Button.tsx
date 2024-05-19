@@ -19,7 +19,7 @@ export type ButtonProps = JSX.HTMLElementProps<'button'> & {
 	iconRight?: ButtonIcon;
 };
 
-const getIcon = (icon: ButtonIcon) => (typeof icon === 'string' ? <Icon icon={icon} /> : <>{icon}</>);
+const getIcon = (icon: ButtonIcon, className?: string) => (typeof icon === 'string' ? <Icon icon={icon} className={className} /> : <>{icon}</>);
 
 export const Button = ({ ref, className, children, variant, size, type = 'button', iconLeft, iconRight, ...props }: ButtonProps) => {
 	return (
@@ -28,9 +28,9 @@ export const Button = ({ ref, className, children, variant, size, type = 'button
 			className={clsx(variant && variant !== 'close' && `btn`, variant && `btn-${variant}`, size && `btn-${size}`, className)}
 			type={type}
 			{...props}>
-			{iconLeft && getIcon(iconLeft)}
+			{iconLeft && getIcon(iconLeft, children ? 'me-1' : undefined)}
 			{children}
-			{iconRight && getIcon(iconRight)}
+			{iconRight && getIcon(iconRight, children ? 'ms-1' : undefined)}
 		</button>
 	);
 };
