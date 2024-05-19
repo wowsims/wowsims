@@ -1,3 +1,4 @@
+import './variants/alt.scss';
 import './variants/danger.scss';
 import './variants/warning.scss';
 import './variants/success.scss';
@@ -7,7 +8,7 @@ import { Icon, IconProps } from '../Icon';
 export type LinkIcon = JSX.Element | IconProps['icon'];
 export type LinkProps = JSX.HTMLElementProps<'a'> &
 	Partial<Pick<JSX.GlobalHTMLAttributes, 'role'>> & {
-		variant?: 'danger' | 'warning' | 'success';
+		variant?: 'alt' | 'danger' | 'warning' | 'success';
 		// tsx-vanilla has String type for href (typo)
 		href?: string;
 		// as button
@@ -33,7 +34,13 @@ export const Link = ({ ref, as, className, children, href, role, attributes, ico
 	}
 
 	return (
-		<a ref={ref} href={href} className={className} {...additionalProps} attributes={{ ...attributes, role, ...additionalProps.attributes }} {...props}>
+		<a
+			ref={ref}
+			{...additionalProps}
+			href={href || additionalProps.href}
+			className={className || additionalProps.className}
+			attributes={{ ...attributes, role, ...additionalProps.attributes }}
+			{...props}>
 			{iconLeft && getIcon(iconLeft, children ? 'me-1' : undefined)}
 			{children}
 			{iconRight && getIcon(iconRight, children ? 'ms-1' : undefined)}
