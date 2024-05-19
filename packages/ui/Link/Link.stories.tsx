@@ -17,6 +17,12 @@ const meta: Meta<LinkProps> = {
 		className: {
 			control: { type: 'text' },
 		},
+		iconLeft: {
+			description: 'Can be a <Icon /> or a IconName',
+		},
+		iconRight: {
+			description: 'Can be a <Icon /> or a IconName',
+		},
 	},
 	args: {
 		href: BASE_URL,
