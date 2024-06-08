@@ -16,10 +16,10 @@ $brand: #e0a335;
 $success: #1eff00;
 
 $expansion-colors: (
-  'sod': $brand,
-  'tbc': #a3e268,
-  'wotlk': #7fcbd8,
-  'cata': #f94119,
+	'sod': $brand,
+	'tbc': #a3e268,
+	'wotlk': #7fcbd8,
+	'cata': #f94119,
 );
 $theme-colors: map-merge($theme-colors, $expansion-colors);
 
@@ -95,6 +95,7 @@ $focus-color: #cd853f;
 $combo-points-color: #ffa07a;
 $lunar-energy-color: #4a8aff;
 $solar-energy-color: #d2952b;
+$holy-power-color: #eed98a;
 
 $resource-colors: (
 	combo-points: $combo-points-color,
@@ -103,6 +104,7 @@ $resource-colors: (
 	health: $health-color,
 	mana: $mana-color,
 	rage: $rage-color,
+	holy-power: $holy-power-color,
 );
 $theme-colors: map-merge($theme-colors, $resource-colors);
 
@@ -124,12 +126,18 @@ $damage-colors: (
 );
 $theme-colors: map-merge($theme-colors, $damage-colors);
 
+// Factions
+$faction-colors: (
+	horde: red,
+	alliance: blue,
+);
+$theme-colors: map-merge($theme-colors, $faction-colors);
+
 // Talents
 $talent-colors: (
-	talent-full: #40bf40,
-	talent-partial: #ffd100,
+	talent-full: #ffd100,
+	talent-partial: #40bf40,
 );
-
 $theme-colors: map-merge($theme-colors, $talent-colors);
 
 // Links
@@ -147,7 +155,6 @@ $table-colors: (
 );
 
 $theme-colors: map-merge($theme-colors, $table-colors);
-
 
 /////////////////////////////////////////////
 //// Global Bootstrap variable overrides ////
@@ -168,7 +175,6 @@ $grid-breakpoints: map-merge($grid-breakpoints, $custom-breakpoints);
  * Border
  **/
 $border-color: $gray-600;
-
 
 $body-bg: #15171e;
 $body-color: $white;

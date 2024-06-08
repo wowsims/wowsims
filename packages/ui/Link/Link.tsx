@@ -3,6 +3,8 @@ import './variants/danger.scss';
 import './variants/warning.scss';
 import './variants/success.scss';
 
+import clsx from 'clsx';
+
 import { Icon, IconProps } from '../Icon';
 
 export type LinkIcon = JSX.Element | IconProps['icon'];
@@ -23,7 +25,7 @@ export type LinkProps = JSX.HTMLElementProps<'a'> &
 
 const getIcon = (icon: LinkIcon, className?: string) => (typeof icon === 'string' ? <Icon icon={icon} className={className} /> : <>{icon}</>);
 
-export const Link = ({ ref, as, className, children, href, role, attributes, iconLeft, iconRight, ...props }: LinkProps) => {
+export const Link = ({ ref, variant, as, className, children, href, role, attributes, iconLeft, iconRight, ...props }: LinkProps) => {
 	const additionalProps: Partial<JSX.HTMLElementProps<'a'>> = {
 		attributes: {},
 	};
@@ -38,7 +40,7 @@ export const Link = ({ ref, as, className, children, href, role, attributes, ico
 			ref={ref}
 			{...additionalProps}
 			href={href || additionalProps.href}
-			className={className || additionalProps.className}
+			className={clsx(variant && `link-${variant}`, className || additionalProps.className)}
 			attributes={{ ...attributes, role, ...additionalProps.attributes }}
 			{...props}>
 			{iconLeft && getIcon(iconLeft, children ? 'me-1' : undefined)}
