@@ -76,10 +76,7 @@ export const Close: Story = {
 	args: {
 		...defaultArgs,
 		variant: 'close',
-		iconLeft: {
-			icon: 'close',
-			className: 'ms-1',
-		},
+		iconLeft: 'close',
 	},
 };
 export const Reset: Story = {
@@ -88,9 +85,6 @@ export const Reset: Story = {
 		...defaultArgs,
 		variant: 'reset',
 		children: 'Reset',
-		iconRight: {
-			icon: 'close',
-			className: 'ms-1',
-		},
+		iconRight: 'close',
 	},
 };

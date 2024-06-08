@@ -5,6 +5,6 @@ export default create({
 	base: 'light',
 	brandTitle: 'WoWSims',
 	brandUrl: BASE_URL,
-	brandImage: '/images/wowsims-icon.png',
+	brandImage: '@wowsims/assets/images/wowsims-icon.png',
 	brandTarget: '_self',
 });
