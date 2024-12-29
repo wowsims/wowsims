@@ -1,5 +1,4 @@
-import './variants/close.scss';
-import './variants/reset.scss';
+import './Button.scss';
 
 import clsx from 'clsx';
 

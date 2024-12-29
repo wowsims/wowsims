@@ -90,12 +90,10 @@
 	/**
    * Tooltip
    **/
-	--bs-tooltip-bg: #{$tooltip-bg};
-	--bs-tooltip-border: #{$tooltip-border};
-	--bs-tooltip-body-color: #{$tooltip-body-color};
+	--bs-tooltip-bg: #{$tooltip-color};
+	--bs-tooltip-border-color: #{$tooltip-border-color};
+	--bs-tooltip-border-width: #{$tooltip-border-width};
 	--bs-tooltip-max-width: #{$tooltip-max-width};
 	--bs-tooltip-max-width-lg: #{$tooltip-max-width-lg};
 	--bs-tooltip-max-width-sm: #{$tooltip-max-width-sm};
-	--bs-tooltip-body-padding-x: #{$tooltip-body-padding-x};
-	--bs-tooltip-body-padding-y: #{$tooltip-body-padding-y};
 }

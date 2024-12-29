@@ -1,5 +1,5 @@
+@use '@wowsims/ui/global/shared' as wowsims;
 @use 'sass:map';
-@import '@wowsims/ui/global/shared.scss';
 
 .expansion-selector {
 	.home {
@@ -27,7 +27,7 @@
 		}
 	}
 
-	@each $label, $value in $expansion-colors {
+	@each $label, $value in wowsims.$expansion-colors {
 		.expansion-#{$label} {
 			--expansion-color: #{$value};
 			--expansion-bg: color-mix(in srgb, color-mix(in srgb, var(--expansion-color), var(--bs-black) 90%) 75%, transparent);

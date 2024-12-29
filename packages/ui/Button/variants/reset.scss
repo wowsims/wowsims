@@ -1,18 +1,19 @@
-@import '@wowsims/ui/global/shared.scss';
+@use '@wowsims/ui/global/shared' as wowsims;
+@use 'sass:map';
 
 .btn-reset {
-	@include button-variant(
+	@include wowsims.button-variant(
 		$background: transparent,
 		$border: transparent,
-		$color: map-get($link-colors, 'link-danger'),
+		$color: map-get(wowsims.$link-colors, 'link-danger'),
 		$hover-background: transparent,
 		$hover-border: transparent,
-		$hover-color: $body-color,
+		$hover-color: wowsims.$body-color,
 		$active-background: transparent,
 		$active-border: transparent,
-		$active-color: map-get($link-colors, 'link-danger'),
+		$active-color: map-get(wowsims.$link-colors, 'link-danger'),
 		$disabled-background: transparent,
 		$disabled-border: transparent,
-		$disabled-color: rgba($body-color, 0.6)
+		$disabled-color: rgba(wowsims.$body-color, 0.6)
 	);
 }

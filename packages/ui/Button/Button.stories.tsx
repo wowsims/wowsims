@@ -35,39 +35,21 @@ const Default: Story = {
 	render: args => <Button {...args} />,
 };
 
-export const Primary: Story = {
+export const Standard: Story = {
 	...Default,
 	args: {
 		...defaultArgs,
-		children: 'Primary button',
+		children: 'Standard Button',
 		variant: 'primary',
 	},
 };
 
-export const PrimaryOutline: Story = {
+export const Outline: Story = {
 	...Default,
 	args: {
 		...defaultArgs,
-		children: 'Primary outline button',
+		children: 'Outline Button',
 		variant: 'outline-primary',
-	},
-};
-
-export const Secondary: Story = {
-	...Default,
-	args: {
-		...defaultArgs,
-		children: 'Secondary button',
-		variant: 'secondary',
-	},
-};
-
-export const SecondaryOutline: Story = {
-	...Default,
-	args: {
-		...defaultArgs,
-		children: 'Secondary outline button',
-		variant: 'outline-secondary',
 	},
 };
 
