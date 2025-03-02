@@ -1,0 +1,14 @@
+a {
+	outline: none;
+	transition: color 0.15s ease-in-out;
+
+	&.link-alt {
+		color: var(--bs-white);
+
+		&:hover,
+		&:focus,
+		&.active {
+			color: var(--bs-brand);
+		}
+	}
+}

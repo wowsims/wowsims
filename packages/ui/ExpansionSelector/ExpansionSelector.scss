@@ -1,0 +1,46 @@
+@use '@wowsims/ui/global/shared' as wowsims;
+@use 'sass:map';
+
+.expansion-selector {
+	.home {
+		--expansion-color: var(--bs-brand);
+		--expansion-bg: none;
+	}
+
+	.expansion-selector-btn,
+	.expansion-dropdown-item {
+		display: grid;
+		grid-gap: var(--spacer-1);
+		grid-template-columns: 24px auto auto;
+		align-items: center;
+		transition: var(--btn-transition);
+	}
+
+	.expansion-dropdown-item {
+		color: var(--expansion-color);
+		background-color: var(--expansion-bg);
+
+		&:hover,
+		&:focus,
+		&.active {
+			background-color: color-mix(in srgb, var(--expansion-bg), var(--bs-black) 20%);
+		}
+	}
+
+	@each $label, $value in wowsims.$expansion-colors {
+		.expansion-#{$label} {
+			--expansion-color: #{$value};
+			--expansion-bg: color-mix(in srgb, color-mix(in srgb, var(--expansion-color), var(--bs-black) 90%) 75%, transparent);
+		}
+	}
+
+	.expansion-selector-icon {
+		justify-self: center;
+		width: 24px;
+		aspect-ratio: 1;
+
+		.home & {
+			width: 19px;
+		}
+	}
+}

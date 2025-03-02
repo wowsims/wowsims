@@ -1,0 +1,119 @@
+@use 'sass:map';
+
+/**
+ * Breakpoints
+ **/
+ $custom-breakpoints: (
+	xxxl: $breakpoint-xxxl,
+	1080p: $breakpoint-1080p,
+	1440p: $breakpoint-1440p,
+	4k: $breakpoint-4k,
+);
+$grid-breakpoints: map-merge($grid-breakpoints, $custom-breakpoints);
+
+/**
+ * Themes
+ **/
+ 
+ $expansion-colors: (
+	'classic': $expansion-classic,
+	'tbc': $expansion-tbc,
+	'wotlk': $expansion-wotlk,
+	'sod': $expansion-sod,
+	'cata': $expansion-cata,
+	'mop': $expansion-mop
+ );
+ $theme-colors: map-merge($theme-colors, $expansion-colors);
+ 
+ $class-colors: (
+	 death-knight: $class-death-knight,
+	 druid: $class-druid,
+	 hunter: $class-hunter,
+	 mage: $class-mage,
+	 paladin: $class-paladin,
+	 priest: $class-priest,
+	 raid: $brand,
+	 rogue: $class-rogue,
+	 shaman: $class-shaman,
+	 warlock: $class-warlock,
+	 warrior: $class-warrior,
+ );
+ $theme-colors: map-merge($theme-colors, $class-colors);
+ 
+ $custom-colors: (
+	 brand: $brand,
+	 primary: $primary,
+	 success: $success,
+	 off-white: $off-white,
+ );
+ $theme-colors: map-merge($theme-colors, $custom-colors);
+ 
+ $custom-alpha: (
+	 black-alpha-30: rgba($black, 0.3),
+	 black-alpha-50: rgba($black, 0.5),
+	 gray-800-alpha-50: rgba($gray-800, 0.5),
+ );
+ $theme-colors: map-merge($theme-colors, $custom-alpha);
+
+$item-quality-colors: (
+	junk: $item-quality-junk,
+	common: $item-quality-common,
+	uncommon: $item-quality-uncommon,
+	rare: $item-quality-rare,
+	epic: $item-quality-epic,
+	legendary: $item-quality-legendary,
+	artifact: $item-quality-artifact,
+	heirloom: $item-quality-heirloom,
+);
+$theme-colors: map-merge($theme-colors, $item-quality-colors);
+
+$resource-colors: (
+	combo-points: $resource-combo-points,
+	energy: $resource-energy,
+	focus: $resource-focus,
+	health: $resource-health,
+	mana: $resource-mana,
+	rage: $resource-rage,
+	holy-power: $resource-holy-power,
+);
+$theme-colors: map-merge($theme-colors, $resource-colors);
+
+$damage-colors: (
+	dps: $damage-dps,
+	threat: $damage-threat,
+	hit: $damage-hit,
+	crit: $damage-crit,
+	partial: $damage-partial,
+	miss: $damage-miss,
+);
+$theme-colors: map-merge($theme-colors, $damage-colors);
+
+// Factions
+$faction-colors: (
+	alliance: $faction-horde,
+	horde: $faction-horde,
+);
+$theme-colors: map-merge($theme-colors, $faction-colors);
+
+// Talents
+$talent-colors: (
+	talent-full: $talent-full,
+	talent-partial: $talent-partial,
+);
+$theme-colors: map-merge($theme-colors, $talent-colors);
+
+// Links
+$link-colors: (
+	link-danger: #ef9eaa,
+	link-warning: #faf07f,
+);
+
+$theme-colors: map-merge($theme-colors, $link-colors);
+
+// Tables
+$table-colors: (
+	table-row-even-bg: #202128,
+	table-row-odd-bg: #2d2f35,
+);
+
+$theme-colors: map-merge($theme-colors, $table-colors);

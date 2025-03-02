@@ -1,0 +1,231 @@
+// Define and overwrite Bootstrap Variables
+// See bootstrap/scss/_variables.scss for a complete list of definitions, or
+// individual component pages in the Bootstrap 5.2 docs for relevant variable usage.
+
+///////////////////////////////////////////////////////////////////////////
+//                                 Custom Variables
+///////////////////////////////////////////////////////////////////////////
+
+/**
+ * Breakpoints
+**/
+$breakpoint-xxxl: 1600px;
+$breakpoint-1080p: 1900px;
+$breakpoint-1440p: 2500px;
+$breakpoint-4k: 3800px;
+
+/**
+ * Custom Themes
+**/
+$brand: #f8b700;
+$off-white: #f0f0f0;
+
+/**
+ * Expansion/Version Theme
+**/
+$expansion-classic: $brand;
+$expansion-tbc: #a3e268;
+$expansion-wotlk: #7fcbd8;
+$expansion-sod: $brand;
+$expansion-cata: #f94119;
+$expansion-mop: #00a86b;
+
+/**
+ * Faction Colors
+**/
+$faction-alliance: blue;
+$faction-horde: red;
+
+/**
+ * Class Colors
+**/
+$class-death-knight: rgb(194, 46, 70);
+$class-druid: rgb(255, 125, 10);
+$class-hunter: rgb(171, 212, 115);
+$class-mage: rgb(105, 204, 240);
+$class-monk: rgb(0, 225, 152);
+$class-paladin: rgb(245, 140, 186);
+$class-priest: rgb(255, 255, 255);
+$class-rogue: rgb(255, 245, 105);
+$class-shaman: rgb(36, 89, 255);
+$class-warlock: rgb(148, 130, 201);
+$class-warrior: rgb(199, 156, 110);
+
+/**
+ * Item Quality Colors
+ **/
+$item-quality-junk: #9d9d9d;
+$item-quality-common: #ffffff;
+$item-quality-uncommon: #1eff00;
+$item-quality-rare: #0070dd;
+$item-quality-epic: #a335ee;
+$item-quality-legendary: #ff8000;
+$item-quality-artifact: #e5cc80;
+$item-quality-heirloom: #0cf;
+
+/**
+ * Resource Colors
+**/
+$resource-health: #22ba00;
+$resource-mana: #2e93fa;
+$resource-energy: #ffd700;
+$resource-rage: #ff0000;
+$resource-focus: #cd853f;
+$resource-combo-points: #ffa07a;
+$resource-lunar-energy: #4a8aff;
+$resource-solar-energy: #d2952b;
+$resource-holy-power: #eed98a;
+
+/**
+ * Damage-related Color
+**/
+$damage-hit: green;
+$damage-crit: blue;
+$damage-partial: yellow;
+$damage-miss: red;
+$damage-dps: #ed5653;
+$damage-threat: #b56d07;
+
+/**
+ * Talent Tree Colors
+**/
+$talent-full: #40bf40;
+$talent-partial: #ffd100;
+
+///////////////////////////////////////////////////////////////////////////
+//                                 Bootstrap Variable Overrides
+///////////////////////////////////////////////////////////////////////////
+
+/**
+ * Configuration
+**/
+// $enable-caret: false;
+$enable-negative-margins: true;
+$enable-rounded: false;
+
+/**
+ * Theme Colors
+**/
+$primary: $brand !default;
+$success: #1eff00;
+$black: #000;
+$white: #fff;
+
+/**
+ * Border
+ **/
+$border-color: #6c757d;
+
+$body-bg: #15171e;
+$body-color: $white;
+$font-size-root: 16px;
+$grid-gutter-width: 0.75rem;
+
+
+/**
+ * Link
+ **/
+$link-color: #a5b1d6;
+$link-decoration: none;
+$link-hover-color: $white;
+
+/**
+ * Button
+ **/
+$btn-close-color: $link-color;
+$btn-close-focus-shadow: none;
+$btn-close-hover-opacity: 1;
+$btn-close-opacity: 1;
+$btn-disabled-opacity: 0.8;
+$btn-hover-bg-shade-amount: 30%;
+$btn-font-size: 0.875rem;
+$btn-padding-y: 0.5rem;
+
+/**
+ * Dropdown
+ **/
+$dropdown-bg: $body-bg;
+$dropdown-border-width: 0;
+$dropdown-color: $white;
+$dropdown-link-active-bg: $dropdown-bg;
+$dropdown-link-color: $white;
+$dropdown-link-hover-color: $white;
+$dropdown-link-hover-bg: color-mix(in srgb, $body-bg, $black 30%);
+$dropdown-padding-y: 0;
+
+// /**
+//  * Form
+//  **/
+// $form-check-input-bg: $link-color;
+// $form-check-input-border: 1px solid color-mix(in srgb, $body-bg, $white 20%);
+// $form-check-input-width: 2rem;
+// $form-check-input-focus-border: color-mix(in srgb, $body-bg, $white 20%);
+// $form-check-input-focus-box-shadow: 0 0 0.25rem $primary;
+// $form-check-input-checked-bg-color: $primary;
+// $form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{color-contrast($primary)}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/></svg>");
+// $form-check-input-checked-border-color: color-mix(in srgb, $body-bg, $white 20%);
+
+// $form-label-margin-bottom: 0.25rem;
+// $form-label-font-size: var(--content-font-size);
+// $form-label-font-weight: normal;
+
+// $form-select-bg: color-mix(in srgb, $body-bg, $white 10%);
+// $form-select-border-color: color-mix(in srgb, $body-bg, $white 20%);
+// $form-select-color: $white;
+// $form-select-disabled-bg: color-mix(in srgb, $body-bg, $white 20%);
+// $form-select-focus-border-color: color-mix(in srgb, $body-bg, $white 20%);
+// $form-select-focus-box-shadow: 0 0 0.25rem color-mix(in srgb, $body-bg, $white 20%);
+// $form-select-font-size: var(--content-font-size);
+// $form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>");
+
+// $form-text-color: $gray-600;
+// $form-text-font-size: var(--content-font-size);
+
+// /**
+//  * Input
+//  **/
+// $input-bg: color-mix(in srgb, $body-bg, $white 10%);
+// $input-border-color: color-mix(in srgb, $body-bg, $white 20%);
+// $input-color: $white;
+// $input-disabled-bg: color-mix(in srgb, $body-bg, $white 20%);
+// $input-focus-bg: color-mix(in srgb, $body-bg, $white 10%);
+// $input-focus-border-color: color-mix(in srgb, $body-bg, $white 20%);
+// $input-focus-box-shadow: 0 0 0.25rem color-mix(in srgb, $body-bg, $white 20%);
+// $input-focus-color: $white;
+// $input-font-size: var(--content-font-size);
+// $input-placeholder-color: $link-color;
+
+// /**
+//  * Modal
+//  **/
+// $modal-content-bg: $body-bg;
+// $modal-content-border-color: $border-color;
+// $modal-footer-margin-between: 0px;
+// $modal-header-border-color: $border-color;
+// $modal-header-padding: 1.25rem;
+// $modal-inner-padding: 1.25rem;
+
+// /**
+//  * Navigation
+//  **/
+// $nav-link-font-size: 0.875rem;
+// $nav-link-padding-y: var(--spacer-3);
+// $nav-link-transition: var(--link-transition);
+
+// $nav-tabs-border-color: $border-color;
+// $nav-tabs-link-active-bg: transparent;
+// $nav-tabs-link-active-color: $white;
+
+// /**
+//  * Tooltip
+//  **/
+// $tooltip-bg: $gray-800;
+$tooltip-padding-x: var(--spacer-2);
+$tooltip-padding-y: var(--spacer-2);
+
+// Custom
+$tooltip-border-color: var(--bs-link-color);
+$tooltip-border-width: 1px;
+$tooltip-max-width: 15vw;
+$tooltip-max-width-lg: 25vw;
+$tooltip-max-width-sm: 75vw;
